@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Happy Birthday Mike!</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <div class="topDiv">
+        <div class="bigImgDiv" th:style="|background:url(${bigImg})|"></div>
+    </div>
+    <div class="bottomBtnDiv">
+        <a class="bottomBtn bottomEnabled" href="/choice" th:text="${result}"></a>
+    </div>
+</div>
+</body>
+</html>

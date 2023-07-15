@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Happy Birthday Mike!</title>
+    <link th:href="@{/style.css}" rel="stylesheet" />
+</head>
+<body>
+<div>
+    <div class="topDiv">
+            <div>
+                <div class="smallBtnDiv">
+                    <form th:action="@{/choice1}" method="post" id="form1">
+                        <button form="form1" th:class="${clicked1}"
+                                th:style="|background:url(${smallBtn1})|"></button>
+                    </form>
+                </div>
+                <div class="smallBtnDiv">
+                    <form th:action="@{/choice2}" method="post" id="form2">
+                        <button form="form2" th:class="${clicked2}"
+                                th:style="|background:url(${smallBtn2})|"></button>
+                    </form>
+                </div>
+            </div>
+            <div>
+                <div class="smallBtnDiv">
+                    <form th:action="@{/choice3}" method="post" id="form3">
+                        <button form="form3" th:class="${clicked3}"
+                                th:style="|background:url(${smallBtn3})|"></button>
+                    </form>
+                </div>
+                <div class="smallBtnDiv">
+                    <form th:action="@{/choice4}" method="post" id="form4">
+                        <button form="form4" th:class="${clicked4}"
+                                th:style="|background:url(${smallBtn4})|"></button>
+                    </form>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="bottomBtnDiv">
+        <form th:action="@{/choiceSubmit}" method="post" id="formSubmit">
+            <button th:class="|bottomBtn ${bottomState}|" form="formSubmit" value="Submit"
+                    th:disabled="${selectDisabled}">Выбрать</button>
+        </form>
+    </div>
+</div>
+</body>
+</html>
